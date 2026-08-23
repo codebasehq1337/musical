@@ -3,18 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musical</title>
+  <title>musical</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="index.html" class="nav-logo">musical</a>
-    <div class="nav-links">
-      <a href="discover.html">discover</a>
-      <a href="profile.html">profile</a>
-      <a href="settings.html">settings</a>
-    </div>
-  </nav>
+  <nav class="nav" id="navbar"></nav>
 
   <main class="container">
     <section class="hero">
@@ -25,9 +18,8 @@
         on repeat. no algorithms. no "discover weekly." just scrobbles and
         people who get it.
       </p>
-      <div class="hero-actions">
-        <a href="discover.html" class="btn btn-primary">start digging</a>
-        <a href="profile.html" class="btn btn-secondary">your profile</a>
+      <div class="hero-actions" id="hero-actions">
+        <a href="login.html" class="btn btn-primary">get started</a>
       </div>
     </section>
 
@@ -36,68 +28,62 @@
       <div class="steps">
         <div class="step">
           <span class="step-num">01</span>
-          <h3>link your accounts</h3>
-          <p>spotify, last.fm, apple music, whatever. we just read your history. we don't post anything.</p>
+          <h3>make an account</h3>
+          <p>name + password. no email. no verification. 10 seconds.</p>
         </div>
         <div class="step">
           <span class="step-num">02</span>
-          <h3>see your taste overlap</h3>
-          <p>we compare your top artists, genres, and that one album you listened to 40 times in a week.</p>
+          <h3>link your accounts</h3>
+          <p>spotify, last.fm, whatever. we just read your history.</p>
         </div>
         <div class="step">
           <span class="step-num">03</span>
-          <h3>add people</h3>
-          <p>send a request. if they accept, you can see what they're playing. that's it. no chat, no feeds, no noise.</p>
+          <h3>find your people</h3>
+          <p>see who shares your taste. add them. see what they're playing.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>## why this exists</h2>
-      <p>
-        every music app tries to recommend you stuff. spotify gives you the same
-        playlist as everyone else. last.fm killed their friends page. discord
-        has no way to find people by taste.
-      </p>
-      <p>
-        i just want to know: who else is in the 0.05% of listeners for
-        <em>have a nice life</em>? who else has <em>loveless</em> in their
-        top 10 every single year? this site answers that.
-      </p>
-    </section>
-
-    <section class="section">
       <h2>## what you get</h2>
       <ul class="feature-list">
-        <li><code>profile</code> — your top artists, recent tracks, playlists. customize the colors if you want.</li>
-        <li><code>discover</code> — find people by genre, artist, or just scroll and see who's online.</li>
-        <li><code>friends</code> — see what your people are playing right now. no stories, no likes, just music.</li>
-        <li><code>stats</code> — how many hours this month, your genre breakdown, your obscure taste score.</li>
+        <li><code>profile</code> — your top artists, recent tracks, playlists. customize colors.</li>
+        <li><code>discover</code> — find people by genre or scroll and see who's online.</li>
+        <li><code>friends</code> — see what your people are playing. no likes, no feeds, just music.</li>
+        <li><code>stats</code> — hours, genre breakdown, obscure taste score.</li>
       </ul>
     </section>
 
     <section class="section">
       <h2>## current status</h2>
       <p>
-        12,400 users. 842k tracks scrobbled. 9,100 matches made.
-        running on a $5 VPS. sometimes slow. always honest.
-      </p>
-      <p class="muted" style="margin-top: 12px;">
+        running on a $5 vps. sometimes slow. always honest.
         built by one person who missed last.fm 2008.
       </p>
     </section>
 
     <section class="section cta">
       <h2>## ready?</h2>
-      <p>it takes 30 seconds. no email required.</p>
-      <a href="discover.html" class="btn btn-primary">make a profile</a>
+      <p>it takes 10 seconds. no email required.</p>
+      <a href="login.html" class="btn btn-primary" id="cta-btn">make an account</a>
     </section>
   </main>
 
   <footer class="footer">
-    <p>musical — 2026 — <a href="https://github.com/yourname/musical">source on github</a></p>
+    <p>musical — 2026 — <a href="https://github.com/codebasehq1337/musical">source on github</a></p>
   </footer>
 
   <script src="js/app.js"></script>
+  <script>
+    APP.renderNav();
+    const session = APP.getSession();
+    if (session) {
+      document.getElementById('hero-actions').innerHTML = 
+        '<a href="discover.html" class="btn btn-primary">find people</a>' +
+        '<a href="profile.html" class="btn btn-secondary">your profile</a>';
+      document.getElementById('cta-btn').href = 'discover.html';
+      document.getElementById('cta-btn').textContent = 'start discovering';
+    }
+  </script>
 </body>
 </html>
