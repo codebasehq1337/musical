@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>profile — musical</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">musical</a>
+    <div class="nav-links">
+      <a href="discover.html">discover</a>
+      <a href="profile.html">profile</a>
+      <a href="settings.html">settings</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="profile-top">
+      <div class="profile-avatar-large" id="profile-avatar">Y</div>
+      <div class="profile-meta">
+        <div id="profile-connections" class="connections"></div>
+        <h1 id="profile-name">you</h1>
+        <p id="profile-handle" class="muted">@you</p>
+        <p id="profile-bio">music lover. building my sound.</p>
+        <div class="profile-actions">
+          <a href="settings.html" class="btn btn-secondary btn-sm">edit</a>
+          <button class="btn btn-ghost btn-sm" onclick="APP.toast('link copied', 'success')">share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-grid">
+      <div class="profile-main">
+        <section class="section">
+          <h2>## recently played</h2>
+          <div class="track-list" id="recent-tracks"></div>
+        </section>
+
+        <section class="section">
+          <h2>## stats</h2>
+          <div class="stats-grid">
+            <div class="stat">
+              <div class="stat-num">1,247</div>
+              <div class="stat-label">tracks this month</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">42</div>
+              <div class="stat-label">unique artists</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">128h</div>
+              <div class="stat-label">total listen time</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">94%</div>
+              <div class="stat-label">obscurity score</div>
+            </div>
+          </div>
+          <div class="genre-tags" style="margin-top: 20px;">
+            <span class="tag">shoegaze 34%</span>
+            <span class="tag">dream pop 28%</span>
+            <span class="tag">post-rock 18%</span>
+            <span class="tag">indie 12%</span>
+            <span class="tag">noise 8%</span>
+          </div>
+        </section>
+      </div>
+
+      <aside class="profile-side">
+        <section class="section">
+          <h2>## playlists</h2>
+          <div class="playlist-list" id="playlists"></div>
+        </section>
+
+        <section class="section">
+          <h2>## friends</h2>
+          <div class="friend-list">
+            <div class="friend">
+              <span class="friend-avatar">A</span>
+              <div>
+                <div class="friend-name">alex chen</div>
+                <div class="friend-status">🟢 online — slowdive</div>
+              </div>
+            </div>
+            <div class="friend">
+              <span class="friend-avatar">J</span>
+              <div>
+                <div class="friend-name">jordan smith</div>
+                <div class="friend-status">🟢 online — diiv</div>
+              </div>
+            </div>
+            <div class="friend">
+              <span class="friend-avatar">D</span>
+              <div>
+                <div class="friend-name">drew nakamura</div>
+                <div class="friend-status">⚫ offline</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>musical — 2026</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
