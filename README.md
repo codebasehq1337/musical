@@ -32,7 +32,8 @@ cd musical
 # or use python -m http.server 8000 if you want
 
 that's literally it.
-the mock users
+
+## the mock users
 there's 8 fake accounts built in so the discover page isn't empty when you first open it. usernames are alex, maya, jordan, etc. passwords match the username if you want to poke around. yes the passwords are plaintext, no i don't care, this is a toy project.
 known issues
 
@@ -41,6 +42,6 @@ known issues
     mobile is usable but not perfect
     the color themes are just ok
 
-why
+## why
 i don't know.
 if you actually use this let me know.
