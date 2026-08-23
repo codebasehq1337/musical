@@ -7,14 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="index.html" class="nav-logo">musical</a>
-    <div class="nav-links">
-      <a href="discover.html">discover</a>
-      <a href="profile.html">profile</a>
-      <a href="settings.html">settings</a>
-    </div>
-  </nav>
+  <nav class="nav" id="navbar"></nav>
 
   <main class="container">
     <div class="page-header">
@@ -30,6 +23,7 @@
       <button class="filter" data-filter="indie rock">indie rock</button>
       <button class="filter" data-filter="hip hop">hip hop</button>
       <button class="filter" data-filter="metal">metal</button>
+      <button class="filter" data-filter="synthwave">synthwave</button>
     </div>
 
     <div class="user-list" id="discover-list"></div>
@@ -40,5 +34,10 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script>
+    APP.requireAuth();
+    APP.renderNav();
+    APP.initDiscover();
+  </script>
 </body>
 </html>
